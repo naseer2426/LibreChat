@@ -107,6 +107,11 @@ actions:
     - "librechat.ai"
     - "google.com"
 
+mcpServers:
+  notion:
+    url: https://mcp.notion.com/mcp
+    headers:
+      Authorization: Bearer ${NOTION_API_KEY}
 
 # Definition of custom endpoints
 endpoints:
