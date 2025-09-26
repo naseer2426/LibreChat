@@ -109,8 +109,8 @@ actions:
 
 mcpServers:
   notion:
-    url: https://mcp.notion.com/mcp
-    
+    url: https://mcp.notion.com/sse
+
 # Definition of custom endpoints
 endpoints:
   # assistants:
