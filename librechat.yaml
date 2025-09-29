@@ -129,42 +129,31 @@ endpoints:
       apiKey: "${OPENROUTER_KEY}" # NOT OPENROUTER_API_KEY
       baseURL: "https://openrouter.ai/api/v1"
       models:
-        default: ["google/gemini-2.0-flash-001"]
+        default: ["openai/gpt-oss-120b"]
         fetch: true
       titleConvo: true
-      titleModel: "google/gemini-2.0-flash-001"
+      titleModel: "openai/gpt-oss-120b:free"
       # Recommended: Drop the stop parameter from the request as Openrouter models use a variety of stop tokens.
       dropParams: ["stop"]
       modelDisplayLabel: "OpenRouter"
-# fileConfig:
-#   endpoints:
-#     assistants:
-#       fileLimit: 5
-#       fileSizeLimit: 10  # Maximum size for an individual file in MB
-#       totalSizeLimit: 50  # Maximum total size for all files in a single request in MB
-#       supportedMimeTypes:
-#         - "image/.*"
-#         - "application/pdf"
-#     openAI:
-#       disabled: true  # Disables file uploading to the OpenAI endpoint
-#     default:
-#       totalSizeLimit: 20
-#     YourCustomEndpointName:
-#       fileLimit: 2
-#       fileSizeLimit: 5
-#   serverFileSizeLimit: 100  # Global server file size limit in MB
-#   avatarSizeLimit: 2  # Limit for user avatar image size in MB
+
 # See the Custom Configuration Guide for more information on Assistants Config:
 # https://www.librechat.ai/docs/configuration/librechat_yaml/object_structure/assistants_endpoint
 modelSpecs:
   list:
-    - name: "Gemini 2.0 Flash"
-      label: "Gemini 2.0 Flash"
+    - name: "GPT OSS 120B"
+      label: "GPT OSS 120B"
       default: true
       preset:
         endpoint: "OpenRouter"
+        description: ""
+        model: "openai/gpt-oss-120b"
+    - name: "Gemini 2.5 Flash"
+      label: "Gemini 2.5 Flash"
+      preset:
+        endpoint: "OpenRouter"
         description: "Really fast, really smart & really cheap"
-        model: "google/gemini-2.0-flash-001"
+        model: "google/gemini-2.5-flash"
     - name: "ChatGPT-4o"
       label: "ChatGPT-4o"
       preset:
