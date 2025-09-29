@@ -190,8 +190,6 @@ endpoints:
 # See the Custom Configuration Guide for more information on Assistants Config:
 # https://www.librechat.ai/docs/configuration/librechat_yaml/object_structure/assistants_endpoint
 modelSpecs:
-  enforce: true
-  prioritize: true
   list:
     - name: "Gemini 2.0 Flash"
       label: "Gemini 2.0 Flash"
