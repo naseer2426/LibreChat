@@ -67,39 +67,6 @@ interface:
   multiConvo: true
   agents: true
 
-# Example Registration Object Structure (optional)
-registration:
-  socialLogins: ["github", "google", "discord", "openid", "facebook", "apple"]
-  # allowedDomains:
-  # - "gmail.com"
-
-# speech:
-#   tts:
-#     openai:
-#       url: ''
-#       apiKey: '${TTS_API_KEY}'
-#       model: ''
-#       voices: ['']
-
-#
-#   stt:
-#     openai:
-#       url: ''
-#       apiKey: '${STT_API_KEY}'
-#       model: ''
-
-# rateLimits:
-#   fileUploads:
-#     ipMax: 100
-#     ipWindowInMinutes: 60  # Rate limit window for file uploads per IP
-#     userMax: 50
-#     userWindowInMinutes: 60  # Rate limit window for file uploads per user
-#   conversationsImport:
-#     ipMax: 100
-#     ipWindowInMinutes: 60  # Rate limit window for conversation imports per IP
-#     userMax: 50
-#     userWindowInMinutes: 60  # Rate limit window for conversation imports per user
-
 # Example Actions Object Structure
 actions:
   allowedDomains:
@@ -107,9 +74,31 @@ actions:
     - "librechat.ai"
     - "google.com"
 
+# Example MCP Servers Object Structure
 mcpServers:
-  notion:
-    url: https://mcp.notion.com/sse
+  everything:
+    # type: sse # type can optionally be omitted
+    url: http://localhost:3001/sse
+  puppeteer:
+    type: stdio
+    command: npx
+    args:
+      - -y
+      - "@modelcontextprotocol/server-puppeteer"
+  filesystem:
+    # type: stdio
+    command: npx
+    args:
+      - -y
+      - "@modelcontextprotocol/server-filesystem"
+      - /home/user/LibreChat/
+    iconPath: /home/user/LibreChat/client/public/assets/logo.svg
+  mcp-obsidian:
+    command: npx
+    args:
+      - -y
+      - "mcp-obsidian"
+      - /path/to/obsidian/vault
 
 # Definition of custom endpoints
 endpoints:
@@ -169,19 +158,13 @@ endpoints:
 # https://www.librechat.ai/docs/configuration/librechat_yaml/object_structure/assistants_endpoint
 modelSpecs:
   list:
-    - name: "GPT OSS 120B"
-      label: "GPT OSS 120B"
+    - name: "Gemini 2.0 Flash"
+      label: "Gemini 2.0 Flash"
       default: true
       preset:
         endpoint: "OpenRouter"
-        description: ""
-        model: "openai/gpt-oss-120b"
-    - name: "Gemini 2.5 Flash"
-      label: "Gemini 2.5 Flash"
-      preset:
-        endpoint: "OpenRouter"
         description: "Really fast, really smart & really cheap"
-        model: "google/gemini-2.5-flash"
+        model: "google/gemini-2.0-flash-001"
     - name: "ChatGPT-4o"
       label: "ChatGPT-4o"
       preset:
@@ -194,12 +177,6 @@ modelSpecs:
         endpoint: "OpenRouter"
         description: "Good for coding problems"
         model: "anthropic/claude-3.7-sonnet"
-    - name: "Claude Sonnet 4"
-      label: "Claude Sonnet 4"
-      preset:
-        endpoint: "OpenRouter"
-        description: ""
-        model: "anthropic/claude-sonnet-4"
     - name: "Gemini 2.5 Pro"
       label: "Gemini 2.5 Pro"
       preset:
@@ -224,9 +201,3 @@ modelSpecs:
         endpoint: "OpenRouter"
         description: ""
         model: "openai/gpt-5-mini"
-    - name: "Grok 4"
-      label: "Grok 4"
-      preset:
-        endpoint: "OpenRouter"
-        description: ""
-        model: "x-ai/grok-4"
