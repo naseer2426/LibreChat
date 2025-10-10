@@ -105,13 +105,13 @@ modelSpecs:
       preset:
         endpoint: "OpenRouter"
         description: ""
-        model: "openai/gpt-oss-120b:online"
+        model: "openai/gpt-oss-120b"
     - name: "Gemini 2.5 Flash"
       label: "Gemini 2.5 Flash"
       preset:
         endpoint: "OpenRouter"
         description: "Really fast, really smart & really cheap"
-        model: "google/gemini-2.5-flash:online"
+        model: "google/gemini-2.5-flash"
     - name: "Claude 3.7 Sonnet"
       label: "Claude 3.7 Sonnet"
       preset:
