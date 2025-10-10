@@ -13,7 +13,7 @@ webSearch:
   searchProvider: "serper" # Options: "serper", "searxng"
  
   # Scraper Configuration
-  firecrawlApiUrl: "${FIRECRAWL_API_URL}"
+  firecrawlApiKey: "${FIRECRAWL_API_KEY}"
   scraperType: "firecrawl" # Options: "firecrawl", "serper"
  
   # Reranker Configuration
