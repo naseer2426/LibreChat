@@ -22,7 +22,7 @@ webSearch:
   rerankerType: "jina" # Options: "jina", "cohere"
  
   # General Settings
-  scraperTimeout: 7500 # Timeout in milliseconds for scraper requests (default: 7500)
+  scraperTimeout: 20000 # Timeout in milliseconds for scraper requests (default: 7500)
   safeSearch: 1 # Options: 0 (OFF), 1 (MODERATE - default), 2 (STRICT)
 
 # Custom interface configuration
