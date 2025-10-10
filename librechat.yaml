@@ -13,13 +13,11 @@ webSearch:
   searchProvider: "serper" # Options: "serper", "searxng"
  
   # Scraper Configuration
-  firecrawlApiKey: "${FIRECRAWL_API_KEY}"
   firecrawlApiUrl: "${FIRECRAWL_API_URL}"
   scraperType: "firecrawl" # Options: "firecrawl", "serper"
  
   # Reranker Configuration
   jinaApiKey: "${JINA_API_KEY}"
-  jinaApiUrl: "${JINA_API_URL}"
   rerankerType: "jina" # Options: "jina", "cohere"
  
   # General Settings
