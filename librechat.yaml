@@ -7,24 +7,6 @@ version: 1.2.1
 # Cache settings: Set to true to enable caching
 cache: true
 
-webSearch:
-  # Search Provider Configuration
-  serperApiKey: "${SERPER_API_KEY}"
-  searchProvider: "serper" # Options: "serper", "searxng"
- 
-  # Scraper Configuration
-  firecrawlApiKey: "${FIRECRAWL_API_KEY}"
-  firecrawlApiUrl: "${FIRECRAWL_API_URL}"
-  scraperType: "firecrawl" # Options: "firecrawl", "serper"
- 
-  # Reranker Configuration
-  jinaApiKey: "${JINA_API_KEY}"
-  rerankerType: "jina" # Options: "jina", "cohere"
- 
-  # General Settings
-  scraperTimeout: 20000 # Timeout in milliseconds for scraper requests (default: 7500)
-  safeSearch: 1 # Options: 0 (OFF), 1 (MODERATE - default), 2 (STRICT)
-
 # Custom interface configuration
 interface:
   # Privacy policy settings
@@ -105,7 +87,7 @@ endpoints:
       apiKey: "${OPENROUTER_KEY}" # NOT OPENROUTER_API_KEY
       baseURL: "https://openrouter.ai/api/v1"
       models:
-        default: ["openai/gpt-oss-120b"]
+        default: ["openai/gpt-oss-120b:online"]
         fetch: true
       titleConvo: true
       titleModel: "openai/gpt-oss-120b"
@@ -123,7 +105,7 @@ modelSpecs:
       preset:
         endpoint: "OpenRouter"
         description: ""
-        model: "openai/gpt-oss-120b"
+        model: "openai/gpt-oss-120b:online"
     - name: "Gemini 2.5 Flash"
       label: "Gemini 2.5 Flash"
       preset:
