@@ -111,7 +111,7 @@ modelSpecs:
       preset:
         endpoint: "OpenRouter"
         description: "Really fast, really smart & really cheap"
-        model: "google/gemini-2.5-flash"
+        model: "google/gemini-2.5-flash:online"
     - name: "Claude 3.7 Sonnet"
       label: "Claude 3.7 Sonnet"
       preset:
