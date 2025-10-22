@@ -75,10 +75,6 @@ actions:
     - "google.com"
 
 webSearch:
-  # Seems like I need to add this because the UI complains about firecrawl being required
-  firecrawlApiKey: "${FIRECRAWL_API_KEY}"
-  firecrawlApiUrl: "${FIRECRAWL_API_URL}"
-
   scraperType: "serper" # Options: "firecrawl", "serper"
   scraperTimeout: 15000 
   safeSearch: 0 
