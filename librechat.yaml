@@ -111,7 +111,7 @@ modelSpecs:
       preset:
         endpoint: "OpenRouter"
         description: "Really fast, really smart & really cheap"
-        model: "google/gemini-2.5-flash:online"
+        model: "google/gemini-2.5-flash"
     - name: "Gemini 2.5 Pro"
       label: "Gemini 2.5 Pro"
       preset:
