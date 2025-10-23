@@ -75,8 +75,8 @@ actions:
     - "google.com"
 
 webSearch:
-  scraperType: "serper" # Options: "firecrawl", "serper"
-  scraperTimeout: 15000 
+  scraperType: "firecrawl" # Options: "firecrawl", "serper"
+  scraperTimeout: 30000 
   safeSearch: 0 
 
 # Example MCP Servers Object Structure
