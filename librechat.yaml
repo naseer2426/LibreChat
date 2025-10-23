@@ -76,8 +76,8 @@ actions:
 
 webSearch:
   scraperType: "firecrawl" # Options: "firecrawl", "serper"
-  scraperTimeout: 30000 
-  safeSearch: 0 
+  scraperTimeout: 60000
+  safeSearch: 0
 
 # Example MCP Servers Object Structure
 mcpServers:
