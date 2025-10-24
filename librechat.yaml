@@ -111,6 +111,7 @@ modelSpecs:
         endpoint: "OpenRouter"
         description: ""
         model: "openai/gpt-oss-120b"
+        reasoning_effort: "high"
     - name: "Gemini 2.5 Flash"
       label: "Gemini 2.5 Flash"
       preset:
